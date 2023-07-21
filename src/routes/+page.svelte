@@ -1,7 +1,5 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import Amoba from './Amoba.svelte';
 </script>
 
 <svelte:head>
@@ -14,7 +12,7 @@
 		Cica
 	</h1>
 
-	<Counter />
+	<Amoba />
 </section>
 
 <style>
