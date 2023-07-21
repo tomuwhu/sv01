@@ -1,5 +1,6 @@
 <script>
 	import Amoba from './Amoba.svelte';
+	var h1 = "Amőba"
 </script>
 
 <svelte:head>
@@ -8,10 +9,7 @@
 </svelte:head>
 
 <section>
-	<h1>
-		Cica
-	</h1>
-
+	<h1>{h1}</h1>
 	<Amoba />
 </section>
 
