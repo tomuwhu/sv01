@@ -1,12 +1,11 @@
 <script>
+// 	@ts-nocheck
+	var next = "O"
 	var table = Array(20).fill("").map(v => Array(20).fill(""))
-	/**
-     * @param {{ target: { id: { split: (arg0: string) => [undefined, Number, Number]; }; }; }} e
-     */
-	function f(e) {
+	function f(event) {
 		var x, y
-		[,x,y] = e.target.id.split("o")
-		table[y][x] = "O"
+		[,x,y] = event.target.id.split("o")
+		table[y][x] = next == "O" ? next = "X" : next = "O"
 	}
 </script>
 
@@ -15,7 +14,7 @@
 		{#each table as row, y}
 		<tr>
 			{#each row as cell, x}
-				<td on:click={f} id=o{x}o{y}o>{cell}</td>
+				<td on:click={f} id=o{x}o{y}o class={cell}>{cell}</td>
 			{/each}
 		</tr>
 		{/each}
@@ -30,8 +29,18 @@
 		border: solid 1px black;
 		user-select: none;
 		cursor: pointer;
+		border-radius: 5px;
+		box-shadow: 1px 1px 3px inset gray;
+		background-color: blanchedalmond;
+	}
+	.O {
+		background-color: aquamarine;
+	}
+	.X {
+		background-color: rgb(235, 103, 59);
 	}
 	table {
 		margin: auto;
 	}
+
 </style>

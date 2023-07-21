@@ -18,7 +18,5 @@
 </section>
 
 <style>
-	* {
-		text-align: center;
-	}
+
 </style>
