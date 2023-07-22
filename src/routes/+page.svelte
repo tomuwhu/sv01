@@ -2,6 +2,7 @@
 	import Amoba from './Amoba.svelte'
   import Malom from './Malom.svelte'
 	var ap = 0
+  var d = [['none', 'block'],['block','none']]
 	var h1 = ["Amőba", "Malom"]
 </script>
 
@@ -27,12 +28,12 @@
   }>{h1[ap + 1]}</h2>
   {/if}
   <hr>
-  {#if ap == 0}
-  <Amoba />
-  {/if}
-  {#if ap == 1}
-  <Malom />
-  {/if}
+  <div style="display:{d[ap][1]}">
+    <Amoba />
+  </div>
+  <div style="display:{d[ap][0]}">
+    <Malom />
+  </div>
 </section>
 
 <style>
