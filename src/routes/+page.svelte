@@ -12,19 +12,15 @@
 
 <section>
   {#if ap > 0}
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-  <h2 on:click={() =>
+  <button on:click={() =>
     ap--
-  }>{h1[ap - 1]}</h2>
+  }>{h1[ap - 1]}</button>
   {/if}
   <h1>{h1[ap]}</h1>
   {#if ap < h1.length - 1}
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-  <h2 on:click={() =>
+  <button on:click={() =>
     ap++
-  }>{h1[ap + 1]}</h2>
+  }>{h1[ap + 1]}</button>
   {/if}
   <hr>
   <div style="display:{ap == 0 ? 'block' : 'none'}">
@@ -36,14 +32,20 @@
 </section>
 
 <style>
-  h1, h2 {
+  h1, button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  h1 {
     display: inline-block;
   }
-  h2 {
+  button {
     cursor: pointer;
     color: gray;
+    border: none;
   }
-  h2:hover {
+  button:hover {
     color: red;
   }
 </style>
