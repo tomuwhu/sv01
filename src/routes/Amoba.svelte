@@ -7,7 +7,8 @@
   function f(event) {
     var x, y;
     [, x, y] = event.target.id.split("o");
-    table[y][x] = next == "O" ? (next = "X") : (next = "O");
+    if (table[y][x] == "")
+      table[y][x] = next == "O" ? (next = "X") : (next = "O");
   }
 </script>
 
