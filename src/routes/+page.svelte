@@ -1,8 +1,7 @@
 <script>
 	import Amoba from './Amoba.svelte'
   import Malom from './Malom.svelte'
-	var ap = 0
-	var h1 = ["Amőba", "Malom"]
+	var ap = 0, h1 = ["Amőba", "Malom"]
 </script>
 
 <svelte:head>
@@ -12,23 +11,15 @@
 
 <section>
   {#if ap > 0}
-  <button on:click={() =>
-    ap--
-  }>{h1[ap - 1]}</button>
+    <button on:click={() => ap--}>{h1[ap - 1]}</button>
   {/if}
   <h1>{h1[ap]}</h1>
   {#if ap < h1.length - 1}
-  <button on:click={() =>
-    ap++
-  }>{h1[ap + 1]}</button>
+    <button on:click={() => ap++ }>{h1[ap + 1]}</button>
   {/if}
   <hr>
-  <div style="display:{ap == 0 ? 'block' : 'none'}">
-    <Amoba />
-  </div>
-  <div style="display:{ap == 1 ? 'block' : 'none'}">
-    <Malom />
-  </div>
+  <div class:hide={ap != 0}><Amoba /></div>
+  <div class:hide={ap != 1}><Malom /></div>
 </section>
 
 <style>
@@ -47,5 +38,8 @@
   }
   button:hover {
     color: red;
+  }
+  .hide {
+    display: none !important;
   }
 </style>
