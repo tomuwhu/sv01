@@ -2,7 +2,7 @@
   import axios from "axios"
   var adat = "?"
 </script>
-<h1>Frontend példa</h1>
+<h1>Frontend Ajax példa</h1>
 A válasz mindenre:
 <div>{adat}</div>
 <button on:click={() => axios
