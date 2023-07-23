@@ -27,13 +27,7 @@
   <br>
   <hr  class:hide={ap != 2}>
   <div class:hide={ap == 1}>
-    {#if ap==0}
-      <h1>Amőba egyedül</h1>
-      <br>
-    {:else}
-      <br>
-    {/if}
-    <Amoba />
+    <Amoba ad={ap == 0 ? "Amőba egyedül" : "Amőba"} />
   </div>
 </section>
 
