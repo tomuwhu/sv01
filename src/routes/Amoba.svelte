@@ -1,3 +1,4 @@
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <script>
   var n = "O"
   var t = Array(20)
@@ -12,11 +13,12 @@
     {#each t as row, y}
       <tr>
         {#each row as c, x}
-          <td on:click = {() => {
-                n = n != "O" ? "O" : "X"
-                if (!t[y][x]) t[y][x] = n
-              }}
-              class = { c }
+          <td 
+            on:click = {() => {
+              n = n != "O" ? "O" : "X"
+              if (!t[y][x]) t[y][x] = n
+            }}
+            class = { c }
           >{ c }</td>
         {/each}
       </tr>
@@ -35,7 +37,7 @@
   }
   td {
     width: 20px; height: 20px;
-    user-select: none; cursor: pointer;
+    cursor: pointer;
     border-radius: 5px;
     box-shadow: 1px 1px 3px inset rgb(137, 137, 125);
     background-color: blanchedalmond;
