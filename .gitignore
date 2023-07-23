@@ -9,3 +9,4 @@ node_modules
 .output
 vite.config.js.timestamp-*
 gh-pages.js
+build
