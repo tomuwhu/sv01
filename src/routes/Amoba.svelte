@@ -25,16 +25,14 @@
 
 <style>
   td {
-    width: 20px;
-    height: 20px;
+    width: 20px; height: 20px;
     border: solid 1px rgb(147, 121, 50);
-    user-select: none;
-    cursor: pointer;
+    user-select: none; cursor: pointer;
     border-radius: 5px;
     box-shadow: 1px 1px 3px inset gray;
     background-color: blanchedalmond;
   }
-  .O { background-color: aquamarine; }
-  .X { background-color: rgb(235, 103, 59); }
+  .O { background-color: aquamarine; cursor: default;}
+  .X { background-color: rgb(235, 103, 59);  cursor: default;}
   table { margin: auto; }
 </style>
