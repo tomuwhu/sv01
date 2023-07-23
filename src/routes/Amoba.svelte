@@ -1,9 +1,9 @@
 <script>
   //@ts-nocheck
-  var next = "O"
+  var next  = "O"
   var table = Array(20)
-    .fill(0)
-    .map(() => Array(20).fill(""))
+                .fill(0)
+                .map(() => Array(20).fill(""))
 </script>
 
 <div>
@@ -11,13 +11,11 @@
     {#each table as row, y}
       <tr>
         {#each row as c, x}
-          <td
-            on:click={(e) => {
+          <td on:click={(e) => {
               if (table[y][x] == "")
                 table[y][x] = next == "O" ? 
-                (next = "X") : (next = "O")
-            }}
-            class={c}>{c}</td
+                next = "X" : next = "O"
+              }} class={c}>{c}</td
           >
         {/each}
       </tr>
