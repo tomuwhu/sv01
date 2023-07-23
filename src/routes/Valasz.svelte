@@ -1,12 +1,17 @@
 <script>
     async function f() {
-        adat = (await (await fetch("data.txt")).json()).Answer
+        adat = (await 
+            (await fetch("data.txt")).json()
+        ).Answer
     }
     var adat = ""
 </script>
 <h1>Frontend példa</h1>
-A válasz mindenre: <div>{adat}</div>
-<button on:click={f} class:hide={typeof adat == "number"}>Lekérdez</button> 
+A válasz mindenre:
+<div>{adat}</div>
+<button on:click={f} 
+        class:hide={typeof adat == "number"}
+        >Lekérdez</button> 
 <style>
     .hide {
         display: none !important;
