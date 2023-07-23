@@ -23,7 +23,7 @@
       {/if}
     {/each}
   </div>
-  <div class:hide={ap == 0}><Valasz /><br></div>
+  <div class:hide={ap == 0}><Valasz /><br><br></div>
   <hr  class:hide={ap != 2}>
   <div class:hide={ap == 1}>
     <Amoba ad={ap == 0 ? "Amőba egyedül" : "Amőba"} />
