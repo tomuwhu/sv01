@@ -1,11 +1,12 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <script>
-  var n = "O"
-  var t = Array(20)
-            .fill(0)
-            .map(() => 
-              Array(20).fill("")
-            )
+  var n = "O", size = 20
+  var t = // Üres táblázat
+    Array(size)
+      .fill(0)
+      .map(() => 
+        Array(size).fill("")
+      )
 </script>
 
 <div>
