@@ -23,8 +23,7 @@
       {/if}
     {/each}
   </div>
-  <div class:hide={ap == 0}><Valasz /></div>
-  <br>
+  <div class:hide={ap == 0}><Valasz /><br></div>
   <hr  class:hide={ap != 2}>
   <div class:hide={ap == 1}>
     <Amoba ad={ap == 0 ? "Amőba egyedül" : "Amőba"} />
@@ -41,9 +40,7 @@
     font-weight: 300;
     font-size: 15px;
     padding: 6px;
-    background: transparent;
     color: gray;
-    border: none;
   }
   button.a {
     color: rgb(121, 29, 29);
