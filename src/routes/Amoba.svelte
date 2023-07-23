@@ -4,19 +4,18 @@
   var table = Array(20)
     .fill(0)
     .map(() => Array(20).fill(""));
-  function f(event) {
-    var x, y;
-    [, x, y] = event.target.id.split("o");
-    table[y][x] = next == "O" ? (next = "X") : (next = "O");
-  }
+  let f = (x, y) => {
+    if (table[y][x] == "")
+      table[y][x] = next == "O" ? (next = "X") : (next = "O");
+  };
 </script>
 
 <div>
   <table>
     {#each table as row, y}
       <tr>
-        {#each row as cell, x}
-          <td on:click={f} id="o{x}o{y}o" class={cell}>{cell}</td>
+        {#each row as c, x}
+          <td on:click={(e) => f(x, y)} class={c}>{c}</td>
         {/each}
       </tr>
     {/each}
