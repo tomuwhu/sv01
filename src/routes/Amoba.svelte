@@ -1,13 +1,9 @@
 <script>
   //@ts-nocheck
-  var next = "O";
+  var next = "O"
   var table = Array(20)
     .fill(0)
-    .map(() => Array(20).fill(""));
-  let f = (x, y) => {
-    if (table[y][x] == "")
-      table[y][x] = next == "O" ? (next = "X") : (next = "O");
-  };
+    .map(() => Array(20).fill(""))
 </script>
 
 <div>
@@ -15,7 +11,14 @@
     {#each table as row, y}
       <tr>
         {#each row as c, x}
-          <td on:click={(e) => f(x, y)} class={c}>{c}</td>
+          <td
+            on:click={(e) => {
+              if (table[y][x] == "")
+                table[y][x] = next == "O" ? 
+                (next = "X") : (next = "O")
+            }}
+            class={c}>{c}</td
+          >
         {/each}
       </tr>
     {/each}
@@ -33,13 +36,7 @@
     box-shadow: 1px 1px 3px inset gray;
     background-color: blanchedalmond;
   }
-  .O {
-    background-color: aquamarine;
-  }
-  .X {
-    background-color: rgb(235, 103, 59);
-  }
-  table {
-    margin: auto;
-  }
+  .O { background-color: aquamarine; }
+  .X { background-color: rgb(235, 103, 59); }
+  table { margin: auto; }
 </style>
