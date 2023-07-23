@@ -1,7 +1,7 @@
 <script>
 	import Amoba from './Amoba.svelte'
-  import Malom from './Malom.svelte'
-	var ap = 0, h1 = ["Amőba", "Malom"]
+  import Valasz from './Valasz.svelte'
+	var ap = 0, h1 = ["Amőba", "Válasz"]
 </script>
 
 <svelte:head>
@@ -19,10 +19,13 @@
   {/if}
   <hr>
   <div class:hide={ap != 0}><Amoba /></div>
-  <div class:hide={ap != 1}><Malom /></div>
+  <div class:hide={ap != 1}><Valasz /></div>
 </section>
 
 <style>
+  * {
+        user-select: none;
+  }
   h1, button {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 300;
