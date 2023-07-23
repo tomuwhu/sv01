@@ -1,7 +1,7 @@
 <script>
 	import Amoba from './Amoba.svelte'
   import Valasz from './Valasz.svelte'
-	var ap = 0, h1 = ["Amőba", "Válasz"]
+	var ap = 1, h1 = ["Amőba", "Válasz"]
 </script>
 
 <svelte:head>
@@ -43,6 +43,6 @@
     color: red;
   }
   .hide {
-    display: none !important;
+    display: none;
   }
 </style>
