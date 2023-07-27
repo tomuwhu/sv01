@@ -6,6 +6,9 @@ export default {
             assets: 'build',
             precompress: false,
             strict: false
-        })
+        }),
+        paths: {
+            base: process.env.NODE_ENV === "production" ? "/sveltekit-gh-pages" : ""
+        }
     }
 }
