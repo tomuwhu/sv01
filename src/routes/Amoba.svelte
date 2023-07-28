@@ -2,13 +2,17 @@
 <script>
 // @ts-nocheck
   export let ad = "Ötöd-ölő"
-  var n = "O", sx = 30, sy = 20
-  var t = // Üres táblázat
-    Array(sy)
-      .fill(0)
-      .map(() => 
-        Array(sx).fill("")
-      )
+  var n = "O", sx = 30, sy = 20, tn = 0
+  var t = []  // Üres táblázat
+  function bt() {
+    tn = 0
+    t = Array(sy)
+        .fill(0)
+        .map(() => 
+          Array(sx).fill("")
+        )
+  }
+  bt()
 </script>
 
 <div>
@@ -20,7 +24,8 @@
           <td 
             on:click = {() => {
               if (!t[y][x]) {
-                t[y][x] = n = n != "O" ? "O" : "X"
+                t[y][x] = n = n != "O" ? "O" : "X";
+                tn++
               }
             }}
             class = { c }
@@ -29,6 +34,10 @@
       </tr>
     {/each}
   </table>
+  <br>
+  <div class="menu" class:hide={tn == 0}>
+    <button class="p"  on:click={bt}>Új játszma</button>
+  </div>
 </div>
 
 <style>

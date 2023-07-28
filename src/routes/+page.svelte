@@ -35,27 +35,4 @@
     user-select: none;
     margin: 0px;
   }
-  button {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 300;
-    font-size: 15px;
-    padding: 6px;
-    color: gray;
-  }
-  button.a {
-    color: rgb(121, 29, 29);
-    background-color: rgb(125, 155, 125);
-  }
-  button.p:hover {
-    cursor: pointer;
-    color: rgb(166, 95, 95);
-  }
-  .hide {
-    display: none;
-  }
-  .menu {
-    padding: 0px;
-    background-color: rgb(181, 223, 209);
-    border-bottom: solid 1px black;
-  }
 </style>

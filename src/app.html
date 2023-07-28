@@ -1,26 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
 </html>
 <style>
 body {
-	text-align: center;
-	background-color: rgb(235, 226, 213);
-	margin: 0px;
+  text-align: center;
+  background-color: rgb(235, 226, 213);
+  margin: 0px;
 }
 h1 {
-	color: rgb(69, 47, 20);
+  color: rgb(69, 47, 20);
 }
 button {
-	background: transparent;
-	border: none;
+  background: transparent;
+  border: none;
+}
+button {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  padding: 6px;
+  color: gray;
+}
+button.a {
+  color: rgb(121, 29, 29);
+  background-color: rgb(125, 155, 125);
+}
+button.p:hover {
+  cursor: pointer;
+  color: rgb(166, 95, 95);
+}
+.menu {
+  padding: 0px;
+  background-color: rgb(181, 223, 209);
+  border-bottom: solid 1px black;
+  border-top: solid 1px black;
+}
+.hide {
+  display: none;
 }
 </style>
