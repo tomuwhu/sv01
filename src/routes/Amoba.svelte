@@ -2,9 +2,10 @@
 <script>
   // @ts-nocheck
   export let ad = "Ötöd-ölő";
-  var n = "O", sx = 30, sy = 20, ny = "", tn = 0
+  var n = "O", sx = 30, sy = 20, ny, tn
   var t = []
   function bt() {
+    ny = ""
     tn = 0
     t = Array(sy)
       .fill(0)
@@ -39,7 +40,7 @@
     {/each}
   </table>
   <br />
-  <div class="menu" class:hide={!ny}>Nyert: {ny}</div>
+  <div class="menu nyert" class:hide={!ny}>Nyert: {ny}</div>
   <div class="menu" class:hide={tn == 0}>
     <button class="p" on:click={bt}>Új játszma</button>
   </div>
